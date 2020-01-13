@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- 通用mapper所在目录 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.icodingedu.mall.reverse.tools.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/icoding-mall"
+                        userId="root"
+                        password="gavin">
+        </jdbcConnection>
+
+        <!-- 对应生成的pojo所在包 -->
+        <javaModelGenerator targetPackage="com.icodingedu.mall.reverse.pojo" targetProject="/Users/gavin/Documents/ideaworkspace/icodingedu-mall-study/im-dbreverse/src/main/java"/>
+
+		<!-- 对应生成的mapper.xml所在目录 -->
+        <sqlMapGenerator targetPackage="mybatis/mapper" targetProject="/Users/gavin/Documents/ideaworkspace/icodingedu-mall-study/im-dbreverse/src/main/resources"/>
+
+		<!-- 配置mapper对应的java映射 -->
+        <javaClientGenerator targetPackage="com.icodingedu.mall.reverse.mapper" targetProject="/Users/gavin/Documents/ideaworkspace/icodingedu-mall-study/im-dbreverse/src/main/java" type="XMLMAPPER"/>
+
+        <!-- 数据库表,需要多少放多少 -->
+		<table tableName="im_product"></table>
+        <table tableName="im_product_images"></table>
+        <table tableName="im_product_inventory"></table>
+    </context>
+</generatorConfiguration>

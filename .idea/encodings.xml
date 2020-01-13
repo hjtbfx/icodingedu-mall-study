@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/im-admin-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-common-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-dbreverse/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-product-manage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-service-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-web-util/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
