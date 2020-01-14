@@ -14,7 +14,7 @@
         </plugin>
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/icoding-mall"
+                        connectionURL="jdbc:mysql://localhost:3306/icoding_mall"
                         userId="root"
                         password="gavin">
         </jdbcConnection>
