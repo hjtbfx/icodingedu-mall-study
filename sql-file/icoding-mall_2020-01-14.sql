@@ -22,11 +22,11 @@
 
 # Dump of table im_attribute_values
 # ------------------------------------------------------------
-DROP DATABASE IF EXISTS `icoding-mall`;
+DROP DATABASE IF EXISTS `icoding_mall`;
 
-create database icoding-mall;
+create database icoding_mall;
 
-use icoding-mall;
+use icoding_mall;
 
 DROP TABLE IF EXISTS `im_attribute_values`;
 
