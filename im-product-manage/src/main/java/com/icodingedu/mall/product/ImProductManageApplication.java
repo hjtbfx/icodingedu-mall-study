@@ -2,8 +2,10 @@ package com.icodingedu.mall.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import tk.mybatis.spring.annotation.MapperScan;
 
+@ComponentScan("com.icodingedu.mall")
 @SpringBootApplication
 @MapperScan("com.icodingedu.mall.product.mapper")
 public class ImProductManageApplication {
