@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.icodingedu.mall.product.mapper.ImProductMapper" >
+  <resultMap id="BaseResultMap" type="com.icodingedu.mall.api.bean.ImProduct" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="product_id" property="productId" jdbcType="VARCHAR" />
+    <result column="product_title" property="productTitle" jdbcType="VARCHAR" />
+    <result column="url_handle" property="urlHandle" jdbcType="VARCHAR" />
+    <result column="first_image_src" property="firstImageSrc" jdbcType="VARCHAR" />
+    <result column="second_image_src" property="secondImageSrc" jdbcType="VARCHAR" />
+    <result column="original_price" property="originalPrice" jdbcType="DECIMAL" />
+    <result column="sale_price" property="salePrice" jdbcType="DECIMAL" />
+    <result column="spu" property="spu" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="short_description" property="shortDescription" jdbcType="VARCHAR" />
+    <result column="detail_description" property="detailDescription" jdbcType="VARCHAR" />
+    <result column="is_delete" property="isDelete" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_emp" property="createEmp" jdbcType="VARCHAR" />
+    <result column="update_emp" property="updateEmp" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="INTEGER" />
+    <result column="update_time" property="updateTime" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

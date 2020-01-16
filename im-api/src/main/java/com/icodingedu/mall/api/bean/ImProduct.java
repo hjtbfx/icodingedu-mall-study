@@ -3,10 +3,12 @@ package com.icodingedu.mall.api.bean;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Table(name = "im_product")
-public class ImProduct {
+public class ImProduct implements Serializable {
+    private static final long serialVersionUID = -4298312059463116715L;
     /**
      * 自增id
      */

@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    password: gavin
+    url: jdbc:mysql://localhost:3306/icoding_mall?useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 30000     #等待分配连接最大时长，毫秒，默认30秒
+      minimum-idle: 5               #最小连接数
+      maximum-pool-size: 20         #最大连接数,推荐的公式：((core_count * 2) + effective_spindle_count)
+      auto-commit: true             #自动提交
+      idle-timeout: 600000          #连接闲置的最大时长，毫秒，默认10分钟
+      pool-name: DataSourceHikariCP #自定义名字
+      max-lifetime: 1800000 #一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟
+      connection-test-query: select 1 #测试活跃sql
+mapper:
+  mappers: com.icodingedu.mall.api.service.MyMapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: false
+dubbo:
+  application:
+    name: admin-web
+  protocol:
+    name: dubbo
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+  consumer:
+    check: false
+    owner: arry
