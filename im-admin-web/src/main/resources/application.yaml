@@ -24,14 +24,3 @@ pagehelper:
   helper-dialect: mysql
   reasonable: true
   support-methods-arguments: false
-dubbo:
-  application:
-    name: admin-web
-  protocol:
-    name: dubbo
-  registry:
-    protocol: zookeeper
-    address: 127.0.0.1:2181
-  consumer:
-    check: false
-    owner: arry

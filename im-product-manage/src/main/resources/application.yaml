@@ -26,16 +26,6 @@ pagehelper:
   helper-dialect: mysql
   reasonable: true
   support-methods-arguments: false
-dubbo:
-  application:
-    name: product-manage
-  protocol:
-    name: dubbo
-    port: 20880
-  registry:
-    protocol: zookeeper
-    address: 127.0.0.1:2181
-  scan:
-    base-packages: com.icodingedu.mall
-  provider:
-    owner: gavin
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.icodingedu.mall.api.bean

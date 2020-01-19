@@ -5,4 +5,5 @@ import java.util.List;
 
 public interface ProductService {
     List<ImProduct> queryProductList(int pageNum,int pageSize);
+    int productUseInventory(String productId,String variantId,int inventory);
 }

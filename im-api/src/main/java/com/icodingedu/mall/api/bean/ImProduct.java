@@ -7,8 +7,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Table(name = "im_product")
-public class ImProduct implements Serializable {
-    private static final long serialVersionUID = -4298312059463116715L;
+public class ImProduct {
     /**
      * 自增id
      */

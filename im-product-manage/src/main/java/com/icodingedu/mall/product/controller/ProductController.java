@@ -24,4 +24,10 @@ public class ProductController {
         PageInfo<ImProduct> productPageInfo = new PageInfo<ImProduct>(imProductList);
         return R.returnOK(200,"成功",productPageInfo);
     }
+
+    @GetMapping("/inventory")
+    @ResponseBody
+    public R updateInventory(){
+        return R.returnOK(200,"ok",productService.productUseInventory("p1578374842vo28","v1578374842q1G11",6));
+    }
 }
