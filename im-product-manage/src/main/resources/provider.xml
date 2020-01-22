@@ -5,7 +5,8 @@
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
     <dubbo:application name="product-manage"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
-    <dubbo:protocol name="dubbo" port="20881" serialization="kryo"/>
+    <!--<dubbo:protocol name="dubbo" port="20880"/>-->
+    <dubbo:protocol name="hessian" port="20880"/>
     <bean id="productService" class="com.icodingedu.mall.product.service.impl.ProductServiceImpl"/>
-    <dubbo:service group="gp2" interface="com.icodingedu.mall.api.service.ProductService" ref="productService"/>
+    <dubbo:service protocol="hessian" serialization="kryo" interface="com.icodingedu.mall.api.service.ProductService" ref="productService"/>
 </beans>

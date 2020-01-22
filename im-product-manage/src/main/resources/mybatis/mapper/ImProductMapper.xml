@@ -24,4 +24,7 @@
     <result column="create_time" property="createTime" jdbcType="INTEGER" />
     <result column="update_time" property="updateTime" jdbcType="INTEGER" />
   </resultMap>
+  <select id="getProductsForDelete" resultMap="BaseResultMap">
+    select * from im_product where is_delete=#{isDelete}
+  </select>
 </mapper>

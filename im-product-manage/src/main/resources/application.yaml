@@ -6,7 +6,7 @@ spring:
   datasource:
     username: root
     password: gavin
-    url: jdbc:mysql://localhost:3306/icoding-mall?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/icoding_mall?useUnicode=true&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
@@ -29,3 +29,6 @@ pagehelper:
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
   type-aliases-package: com.icodingedu.mall.api.bean
+fdfs:
+  tracker-list:
+    - 47.92.127.93:22122

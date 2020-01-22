@@ -1,5 +1,7 @@
 server:
   port: 8080
+  tomcat:
+    uri-encoding: UTF-8
 spring:
   datasource:
     username: root
@@ -16,6 +18,16 @@ spring:
       pool-name: DataSourceHikariCP #自定义名字
       max-lifetime: 1800000 #一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟
       connection-test-query: select 1 #测试活跃sql
+  thymeleaf:
+    cache: false
+logging:
+  level:
+    com:
+      icodingedu:
+        mall: trace
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.icodingedu.mall.api.bean
 mapper:
   mappers: com.icodingedu.mall.api.service.MyMapper
   not-empty: false

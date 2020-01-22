@@ -26,17 +26,10 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="im-api" />
-    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.10" level="project" />
-    <orderEntry type="library" name="Maven: tk.mybatis:mapper:4.1.5" level="project" />
-    <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
-    <orderEntry type="module" module-name="im-common-util" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.2.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.2.2.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
-    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.12.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.12.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.29" level="project" />
@@ -55,14 +48,10 @@
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.29" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-validation:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.18.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml:classmate:1.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.2.2.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test:2.2.2.RELEASE" level="project" />
@@ -92,6 +81,32 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-test:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.xmlunit:xmlunit-core:2.6.3" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.10" level="project" />
+    <orderEntry type="library" name="Maven: tk.mybatis:mapper:4.1.5" level="project" />
+    <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-starter:1.2.13" level="project" />
+    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-autoconfigure:1.2.13" level="project" />
+    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:5.1.11" level="project" />
+    <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:2.0" level="project" />
+    <orderEntry type="module" module-name="im-common-util" />
+    <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.6" level="project" />
+    <orderEntry type="library" name="Maven: com.github.tobato:fastdfs-client:1.26.7" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.29" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.29" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.9" level="project" />
+    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.3" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.7.0" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.18.Final" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml:classmate:1.5.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: net.coobird:thumbnailator:0.4.8" level="project" />
     <orderEntry type="library" name="Maven: org.apache.dubbo:dubbo-spring-boot-starter:2.7.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.dubbo:dubbo-spring-boot-autoconfigure:2.7.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.dubbo:dubbo-spring-boot-autoconfigure-compatible:2.7.3" level="project" />
@@ -100,7 +115,6 @@
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.43.Final" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" name="Maven: com.101tec:zkclient:0.11" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.29" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:2.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-client:2.12.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:16.0.1" level="project" />
@@ -112,6 +126,14 @@
     <orderEntry type="library" name="Maven: jline:jline:0.9.94" level="project" />
     <orderEntry type="library" name="Maven: org.apache.yetus:audience-annotations:0.5.0" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.10.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.caucho:hessian:4.0.63" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-servlet:9.4.26.v20200117" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-security:9.4.24.v20191120" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-server:9.4.24.v20191120" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-http:9.4.24.v20191120" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:9.4.24.v20191120" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-io:9.4.24.v20191120" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware:kryo:4.0.2" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware:reflectasm:1.11.3" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
@@ -126,10 +148,6 @@
     <orderEntry type="library" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE" level="project" />
     <orderEntry type="module" module-name="im-service-util" />
-    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-starter:1.2.13" level="project" />
-    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-autoconfigure:1.2.13" level="project" />
-    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:5.1.11" level="project" />
-    <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:2.0" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.5.3" level="project" />

@@ -1,4 +1,4 @@
-package com.icodingedu.mall.common;
+package com.icodingedu.mall.api.handle;
 
 import java.io.Serializable;
 

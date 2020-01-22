@@ -5,6 +5,6 @@
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
     <dubbo:application name="admin-web"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
-    <dubbo:protocol name="dubbo" serialization="kryo" optimizer="com.icodingedu.mall.product.service.impl.SerializationOptimizerImpl"/>
-    <dubbo:reference group="gp1,gp2" merger="true" id="productService" check="false" interface="com.icodingedu.mall.api.service.ProductService"/>
+    <dubbo:protocol name="hessian" serialization="kryo" optimizer="com.icodingedu.mall.admin.service.impl.SerializationOptimizerImpl"/>
+    <dubbo:reference timeout="3000" id="productService" check="false" interface="com.icodingedu.mall.api.service.ProductService"/>
 </beans>

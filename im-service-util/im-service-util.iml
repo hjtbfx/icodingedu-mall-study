@@ -16,7 +16,7 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-starter:1.2.13" level="project" />
+    <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.2.RELEASE" level="project" />
@@ -33,10 +33,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.yaml:snakeyaml:1.25" level="project" />
-    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-autoconfigure:1.2.13" level="project" />
-    <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:5.1.11" level="project" />
-    <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:2.0.3" level="project" />

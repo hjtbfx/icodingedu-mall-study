@@ -3,7 +3,7 @@ package com.icodingedu.mall.product.controller;
 import com.github.pagehelper.PageInfo;
 import com.icodingedu.mall.api.bean.ImProduct;
 import com.icodingedu.mall.api.service.ProductService;
-import com.icodingedu.mall.common.R;
+import com.icodingedu.mall.api.handle.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
