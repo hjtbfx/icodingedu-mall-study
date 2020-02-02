@@ -16,4 +16,10 @@
     <result column="create_time" property="createTime" jdbcType="INTEGER" />
     <result column="update_time" property="updateTime" jdbcType="INTEGER" />
   </resultMap>
+  <select id="getProductInventoryForId" resultMap="BaseResultMap">
+    select * from im_product_inventory where product_id=#{productId} and variants_id=#{variantId}
+  </select>
+  <update id="updateInventory">
+    update im_product_inventory set inventory=inventory-#{inventory} where product_id=#{productId} and variants_id=#{variantId}
+  </update>
 </mapper>

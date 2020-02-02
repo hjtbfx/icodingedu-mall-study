@@ -1,4 +1,4 @@
-package com.icodingedu.mall.common;
+package com.icodingedu.mall.api.handle;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

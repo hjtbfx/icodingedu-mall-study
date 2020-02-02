@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.icodingedu.mall.product.mapper.ImProductVariantsMapper" >
+  <resultMap id="BaseResultMap" type="com.icodingedu.mall.api.bean.ImProductVariants" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="variants_id" property="variantsId" jdbcType="VARCHAR" />
+    <result column="variants_title" property="variantsTitle" jdbcType="VARCHAR" />
+    <result column="sku" property="sku" jdbcType="VARCHAR" />
+    <result column="original_price" property="originalPrice" jdbcType="DECIMAL" />
+    <result column="sale_price" property="salePrice" jdbcType="DECIMAL" />
+    <result column="variants_weight" property="variantsWeight" jdbcType="INTEGER" />
+    <result column="option_name1" property="optionName1" jdbcType="VARCHAR" />
+    <result column="option_name2" property="optionName2" jdbcType="VARCHAR" />
+    <result column="option_name3" property="optionName3" jdbcType="VARCHAR" />
+    <result column="option_value1" property="optionValue1" jdbcType="VARCHAR" />
+    <result column="option_value2" property="optionValue2" jdbcType="VARCHAR" />
+    <result column="option_value3" property="optionValue3" jdbcType="VARCHAR" />
+    <result column="product_id" property="productId" jdbcType="VARCHAR" />
+    <result column="image_src" property="imageSrc" jdbcType="VARCHAR" />
+    <result column="is_delete" property="isDelete" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="INTEGER" />
+    <result column="create_emp" property="createEmp" jdbcType="VARCHAR" />
+    <result column="update_emp" property="updateEmp" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="INTEGER" />
+    <result column="update_time" property="updateTime" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

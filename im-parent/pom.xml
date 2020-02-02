@@ -43,6 +43,9 @@
         <!--hystrix-->
         <hystrix.version>2.2.1.RELEASE</hystrix.version>
         <hystrix-dashboard.version>2.2.1.RELEASE</hystrix-dashboard.version>
+        <!--hessian-->
+        <jetty-servlet.version>9.4.26.v20200117</jetty-servlet.version>
+        <com-caucho-hessian.version>4.0.63</com-caucho-hessian.version>
     </properties>
 
     <dependencyManagement>
@@ -56,6 +59,17 @@
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-spring-boot-starter</artifactId>
                 <version>${dubbo-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.caucho</groupId>
+                <artifactId>hessian</artifactId>
+                <version>${com-caucho-hessian.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-servlet</artifactId>
+                <version>${jetty-servlet.version}</version>
             </dependency>
 
             <dependency>

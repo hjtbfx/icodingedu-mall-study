@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>icoding mall</title>
+    <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/bootpage.css">
+    <link rel="stylesheet" href="./css/bootstrap-pager.css">
+</head>
+<body class="sidebar-fixed header-fixed">
+<div class="page-wrapper">
+
+    <div th:replace="~{common/topbar::topbar(requestpage='product-list')}" />
+
+    <div class="main-container">
+
+        <div th:replace="~{common/menubar::menubar(requestpage='product-list')}" />
+        <div id="ShowImage_Form" class="modal hide" style="text-align: center">
+            <div class="modal-body">
+                <div id="img_show"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            Product List
+                        </div>
+
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>Product Id</th>
+                                        <th>Product Title</th>
+                                        <th>Url Handle</th>
+                                        <th>First Image</th>
+                                        <th>Original Price</th>
+                                        <th>Sale Price</th>
+                                        <th>Create Emp</th>
+                                        <th>Create Time</th>
+                                        <th>Operation</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="imProduct:${imProductList.getList()}">
+                                        <td th:text="${imProduct.getId()}"></td>
+                                        <td th:text="${imProduct.getProductId()}"></td>
+                                        <td th:text="${imProduct.getProductTitle()}"></td>
+                                        <td th:text="${imProduct.getUrlHandle()}"></td>
+                                        <td style="width: 80px;"><img style="width: 80px;" onmouseover="this.style.cursor='pointer';this.style.cursor='hand'" onmouseout="this.style.cursor='default'" th:src="${imProduct.getFirstImageSrc()}" th:onclick="'javascript:showimage(\''+__${imProduct.getFirstImageSrc()}__+'\');'"></td>
+                                        <td th:text="'$'+${imProduct.getOriginalPrice()}"></td>
+                                        <td th:text="'$'+${imProduct.getSalePrice()}"></td>
+                                        <td th:text="${imProduct.getCreateEmp()}"></td>
+                                        <td th:text="${Tools.stampToDate(imProduct.getCreateTime()) }"></td>
+                                        <td style="float:left">
+                                            <button class="btn btn-primary">UPDATE</button>&nbsp;
+                                            <button class="btn btn-danger">DELETE</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="float:right" id="page-container-static-normal"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/popper.js/popper.min.js"></script>
+<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="./vendor/chart.js/chart.min.js"></script>
+<script src="./js/carbon.js"></script>
+<script src="./js/demo.js"></script>
+<script src="./js/bootstrap-pager.js"></script>
+<script>
+    function showimage(source){
+        $("#ShowImage_Form").find("#img_show").html("<image src='"+source+"'/>");
+        $("#ShowImage_Form").modal();
+    }
+    //静态演示
+    $("#page-container-static-normal").page({
+        count:[[${imProductList.getTotal()}]],
+        theme:"normal",
+        pageSize:[[${imProductList.getPageSize()}]],
+        pageNum:[[${imProductList.getPageNum()}]]
+    });
+    $("#page-container-static-normal").on("pageChanged",function (event,params) {
+        console.log(params);
+        console.log(params.pageNum)
+        $(this).data("page").refresh(params);
+        window.location.href = "product-list?page="+params.pageNum;
+    })
+</script>
+</body>
+</html>

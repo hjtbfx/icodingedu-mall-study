@@ -26,3 +26,9 @@ pagehelper:
   helper-dialect: mysql
   reasonable: true
   support-methods-arguments: false
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.icodingedu.mall.api.bean
+fdfs:
+  tracker-list:
+    - 47.92.127.93:22122

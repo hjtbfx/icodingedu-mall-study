@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>icoding mall</title>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/simple-line-icons/2.4.1/css/simple-line-icons.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <link rel="stylesheet" href="./css/bootfont.css">
+    <link rel="stylesheet" href="./css/fileinput.css">
+
+</head>
+<body class="sidebar-fixed header-fixed">
+<div class="page-wrapper">
+
+    <div th:replace="~{common/topbar::topbar(requestpage='product-add')}" />
+
+    <div class="main-container">
+
+        <div th:replace="~{common/menubar::menubar(requestpage='product-add')}" />
+
+        <form action="addProduct" method="post" name="productForm" enctype="multipart/form-data">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                Product Base Information
+                            </div>
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="require">Product Title</label>
+                                            <input required id="product_title" name="product_title" class="form-control" placeholder="Input value">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="require">Product Url Handle</label>
+                                            <input required id="url_handle" name="url_handle" class="form-control" placeholder="Input value">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="require">Original Price</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">$</span>
+                                            </div>
+                                            <input required id="original_price" name="original_price" type="text" class="form-control">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="require">Sale Price</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">$</span>
+                                            </div>
+                                            <input required id="sale_price" name="sale_price" type="text" class="form-control">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="require">Product Cover Image</label>
+                                        <input type="file" required name="first_image_src" id="first_image_src" value="" multiple="multiple" data-show-preview="true" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="require">Product Back Image</label>
+                                        <input type="file" required name="second_image_src" id="second_image_src" value="" multiple="multiple" data-show-preview="true" />
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label class="require">Product Detail Image</label>
+                                        <input type="file" required name="detail_image_src" id="detail_image_src" value="" multiple="multiple" data-show-preview="true" />
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="require">Product Short Description</label>
+                                            <input required id="short_description" name="short_description" class="form-control" placeholder="Input value">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="require">Product Detail Description</label>
+                                            <textarea required id="detail_description" name="detail_description" class="form-control" rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="toggle-switch" data-ts-color="primary">
+                                            <label for="status" class="ts-label">产品是否上架展示</label>
+                                            <input id="status" value="1" name="status" type="checkbox" hidden="hidden" checked>
+                                            <label for="status" class="ts-helper"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                Variants Mange
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="require">Option Name 1</label>
+                                            <input required id="option_name1" name="option_name1" class="form-control" placeholder="Input value">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label class="require">Option Values 1</label>
+                                            <input required id="option_value1" name="option_value1" class="form-control" placeholder="多个值,分割">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Option Name 2</label>
+                                            <input id="option_name2" name="option_name2" class="form-control" placeholder="Input value">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label>Option Values 2</label>
+                                            <input id="option_value2" name="option_value2" class="form-control" placeholder="多个值,分割">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Option Name 3</label>
+                                            <input id="option_name3" name="option_name3" class="form-control" placeholder="Input value">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label>Option Values 3</label>
+                                            <input id="option_value3" name="option_value3" class="form-control" placeholder="多个值,分割">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="require">Weight</label>
+                                        <div class="input-group mb-4">
+                                            <input required id="variants_weight" name="variants_weight" type="text" class="form-control">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">g</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn btn-primary">Submit Product</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                Collection Manage
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                </div>
+
+                                <div class="row">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/popper.js/popper.min.js"></script>
+<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="./vendor/chart.js/chart.min.js"></script>
+<script src="./js/carbon.js"></script>
+<script src="./js/demo.js"></script>
+
+<script src="./js/fileinput.js"></script>
+<script src="./js/zh.js"></script>
+
+<script>
+    $("#first_image_src").fileinput({
+        language : 'zh',//设置文中文
+        //uploadUrl : "uploadImg",//图片上传的url，我这里对应的是后台struts配置好的的action方法
+        //maxFileCount : 1,
+        showDrag : true,
+        showCaption : true,//显示标题
+        showBrowse : true,//显示选择按钮
+        showCancel : false,
+        showUpload : false,
+        showRemove : true, //显示移除按钮
+        uploadAsync : false,//默认异步上传
+        showPreview : true,//是否显示预览
+        textEncoding : "UTF-8",//文本编码
+        autoReplaceBoolean : false,//选择图片时不清空原图片
+        dropZoneTitle : "产品主图,封面图,支持拖拽上传"
+    });
+    $("#second_image_src").fileinput({
+        language : 'zh',//设置文中文
+        //uploadUrl : "uploadImg",//图片上传的url，我这里对应的是后台struts配置好的的action方法
+        maxFileCount : 1,
+        showCaption : true,//显示标题
+        showBrowse : true,//显示选择按钮
+        showCancel : false,
+        showUpload : false,
+        showRemove : true, //显示移除按钮
+        uploadAsync : false,//默认异步上传
+        showPreview : true,//是否显示预览
+        textEncoding : "UTF-8",//文本编码
+        autoReplaceBoolean : false,//选择图片时不清空原图片
+        dropZoneTitle : "产品背景图,底图,支持拖拽上传"
+    });
+    $("#detail_image_src").fileinput({
+        language : 'zh',//设置文中文
+        uploadUrl : "uploadImg",//图片上传的url，我这里对应的是后台struts配置好的的action方法
+        maxFileCount : 10,
+        showCaption : true,//显示标题
+        showBrowse : true,//显示选择按钮
+        showCancel : false,
+        showUpload : false,
+        showRemove : true, //显示移除按钮
+        uploadAsync : false,//默认异步上传
+        showPreview : true,//是否显示预览
+        textEncoding : "UTF-8",//文本编码
+        autoReplaceBoolean : false,//选择图片时不清空原图片
+        dropZoneTitle : "产品细节图,支持拖拽上传",
+        layoutTemplates : {
+            //actionDelete:'', //去除上传预览的缩略图中的删除图标
+            actionUpload:'',//去除上传预览缩略图中的上传图片；
+            //actionZoom:''   //去除上传预览缩略图中的查看详情预览的缩略图标。
+        }
+    });
+    /**
+    $("#img").on('fileuploaded', function(event, data, previewId, index) {//异步上传成功结果处理
+        var img= JSON.parse(data.response);//接收后台传过来的json数据
+        alert(img.imgUrl);
+    });
+    $("#img").on('fileerror', function(event, data, msg) {//异步上传失败结果处理
+        alert("uploadError");
+    });
+    **/
+</script>
+
+</body>
+</html>
